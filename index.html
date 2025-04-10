@@ -186,16 +186,8 @@
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
-                <label for="pid" class="required">Farmer ID (PID)</label>
-                <input type="text" id="pid" name="pid" placeholder="Enter your farmer ID if assigned" required>
-            </div>
-            <div class="form-group">
-                <label for="location" class="required">Location/Village</label>
+                <label for="location" class="required">Location</label>
                 <input type="text" id="location" name="location" placeholder="Enter your village or location" required>
-            </div>
-            <div class="form-group">
-                <label for="district">District/Region</label>
-                <input type="text" id="district" name="district" placeholder="Enter your district or region">
             </div>
             <div class="form-group">
                 <label for="contact" class="required">Contact Number</label>
@@ -211,32 +203,7 @@
             <h2>Farm Information</h2>
             <div class="form-group">
                 <label for="field_area" class="required">Total Field Area Owned (hectares/acres)</label>
-                <input type="number" id="field_area" name="field_area" step="0.01" min="0" placeholder="Enter area" required>
-                <select id="area_unit" name="area_unit">
-                    <option value="hectares">Hectares</option>
-                    <option value="acres">Acres</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="field_cultivated">Field Area Currently Cultivated (hectares/acres)</label>
-                <input type="number" id="field_cultivated" name="field_cultivated" step="0.01" min="0" placeholder="Enter cultivated area">
-            </div>
-            <div class="form-group">
-                <label>Type of Farming (Select all that apply)</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="crop" name="farming_type" value="crop">
-                    <label for="crop">Crop Farming</label>
-                    <input type="checkbox" id="livestock" name="farming_type" value="livestock">
-                    <label for="livestock">Livestock</label>
-                    <input type="checkbox" id="mixed" name="farming_type" value="mixed">
-                    <label for="mixed">Mixed Farming</label>
-                    <input type="checkbox" id="poultry" name="farming_type" value="poultry">
-                    <label for="poultry">Poultry</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="main_crops">Main Crops Grown</label>
-                <textarea id="main_crops" name="main_crops" placeholder="List main crops you grow"></textarea>
+                <input type="number" id="field_area" name="field_area" step="0.01" min="0" placeholder="" required>
             </div>
             <div class="form-group">
                 <label for="farming_experience">Farming Experience (years)</label>
@@ -262,7 +229,7 @@
                 <input type="date" id="soil_test_date" name="soil_test_date">
             </div>
             <div class="form-group">
-                <label><span class="question-number">2)</span>How much would you be willing to pay for one-time soil tests?</label>
+                <label><span class="question-number">2)</span>How much pay for one-time soil tests?</label>
                 <div class="radio-group">
                     <input type="radio" id="price_range1" name="price_willing" value="0-10">
                     <label for="price_range1">R0-100</label>
@@ -275,7 +242,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="question-number">3)</span>Did previous test results provide actionable recommendations?</label>
+                <label><span class="question-number">3)</span>Is the previous test results providing actionable recommendations?</label>
                 <div class="radio-group">
                     <input type="radio" id="yes_action" name="actionable_results" value="yes">
                     <label for="yes_action">Yes</label>
@@ -286,20 +253,6 @@
                     <input type="radio" id="never_tested" name="actionable_results" value="never_tested">
                     <label for="never_tested">Never tested</label>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="soil_type">What type of soil do you have? (if known)</label>
-                <select id="soil_type" name="soil_type">
-                    <option value="">-- Select soil type --</option>
-                    <option value="clay">Clay</option>
-                    <option value="sandy">Sandy</option>
-                    <option value="loamy">Loamy</option>
-                    <option value="silty">Silty</option>
-                    <option value="peaty">Peaty</option>
-                    <option value="chalky">Chalky</option>
-                    <option value="mixed">Mixed</option>
-                    <option value="unknown">Don't know</option>
-                </select>
             </div>
         </div>
 
@@ -333,86 +286,7 @@
                 <textarea id="other_support" name="other_support" placeholder="Describe other support you need"></textarea>
             </div>
         </div>
-
-        <div class="survey-section">
-            <h2>Environmental Practices</h2>
-            <div class="form-group">
-                <label>Do you practice any of the following sustainable farming methods?</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="crop_rotation" name="sustainable_methods" value="crop_rotation">
-                    <label for="crop_rotation">Crop rotation</label>
-                    <input type="checkbox" id="intercropping" name="sustainable_methods" value="intercropping">
-                    <label for="intercropping">Intercropping</label>
-                    <input type="checkbox" id="cover_crops" name="sustainable_methods" value="cover_crops">
-                    <label for="cover_crops">Cover crops</label>
-                    <input type="checkbox" id="organic" name="sustainable_methods" value="organic">
-                    <label for="organic">Organic farming</label>
-                    <input type="checkbox" id="agroforestry" name="sustainable_methods" value="agroforestry">
-                    <label for="agroforestry">Agroforestry</label>
-                    <input type="checkbox" id="conservation_tillage" name="sustainable_methods" value="conservation_tillage">
-                    <label for="conservation_tillage">Conservation tillage</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="water_source">What is your main water source for farming?</label>
-                <select id="water_source" name="water_source">
-                    <option value="">-- Select water source --</option>
-                    <option value="rain_fed">Rain-fed only</option>
-                    <option value="river">River/stream</option>
-                    <option value="well">Well/borehole</option>
-                    <option value="dam">Dam/pond</option>
-                    <option value="piped">Piped water</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Have you experienced any of these climate-related challenges?</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="drought" name="climate_challenges" value="drought">
-                    <label for="drought">Drought</label>
-                    <input type="checkbox" id="flooding" name="climate_challenges" value="flooding">
-                    <label for="flooding">Flooding</label>
-                    <input type="checkbox" id="irregular_rain" name="climate_challenges" value="irregular_rain">
-                    <label for="irregular_rain">Irregular rainfall patterns</label>
-                    <input type="checkbox" id="extreme_heat" name="climate_challenges" value="extreme_heat">
-                    <label for="extreme_heat">Extreme heat</label>
-                    <input type="checkbox" id="extreme_cold" name="climate_challenges" value="extreme_cold">
-                    <label for="extreme_cold">Extreme cold</label>
-                    <input type="checkbox" id="pests" name="climate_challenges" value="new_pests">
-                    <label for="pests">New pests/diseases</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="survey-section">
-            <h2>Additional Information</h2>
-            <div class="form-group">
-                <label for="additional_comments">Any other information you would like to share about your farming practices</label>
-                <textarea id="additional_comments" name="additional_comments" placeholder="Share any other information that might be helpful"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="best_contact_time">Best time to contact you</label>
-                <select id="best_contact_time" name="best_contact_time">
-                    <option value="">-- Select time --</option>
-                    <option value="morning">Morning (6am-12pm)</option>
-                    <option value="afternoon">Afternoon (12pm-5pm)</option>
-                    <option value="evening">Evening (5pm-9pm)</option>
-                    <option value="anytime">Anytime</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Would you be interested in participating in agricultural training workshops?</label>
-                <div class="radio-group">
-                    <input type="radio" id="workshop_yes" name="workshop_interest" value="yes">
-                    <label for="workshop_yes">Yes</label>
-                    <input type="radio" id="workshop_no" name="workshop_interest" value="no">
-                    <label for="workshop_no">No</label>
-                    <input type="radio" id="workshop_maybe" name="workshop_interest" value="maybe">
-                    <label for="workshop_maybe">Maybe</label>
-                </div>
-            </div>
-        </div>
-
+     
         <button type="submit">Submit Survey</button>
     </form>
 
